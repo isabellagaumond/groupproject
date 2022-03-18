@@ -17,3 +17,4 @@ let mySprite = sprites.create(img`
     e e e 2 e e c e c c c . . . . . 
     . c c c c c c c . . . . . . . . 
     `, SpriteKind.Player)
+game.splash("")
