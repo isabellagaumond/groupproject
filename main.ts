@@ -1,5 +1,9 @@
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    myDart.throwDart()
+})
+let myDart: Dart = null
 scene.setBackgroundColor(12)
-let myDart = darts.create(img`
+myDart = darts.create(img`
     . . . . 4 4 4 4 f 4 4 4 4 . . . . 
     . . . 4 4 4 4 4 f 4 4 4 4 4 . . . 
     . . f 4 4 4 4 4 f 4 4 4 4 4 f . . 
