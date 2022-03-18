@@ -18,3 +18,4 @@ let mySprite = sprites.create(img`
     . c c c c c c c . . . . . . . . 
     `, SpriteKind.Player)
 game.splash("")
+controller.moveSprite(mySprite)
