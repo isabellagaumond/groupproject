@@ -19,3 +19,4 @@ let mySprite = sprites.create(img`
     `, SpriteKind.Player)
 game.splash("")
 controller.moveSprite(mySprite)
+music.baDing.playUntilDone()
