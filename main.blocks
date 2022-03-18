@@ -1,0 +1,19 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable type="KIND_SpriteKind" id="+]1gVsW$joIb;DihiR?M">Player</variable><variable type="KIND_SpriteKind" id="k1!sdc`x-ZU$@Re|!ZH+">Projectile</variable><variable type="KIND_SpriteKind" id="kyGim5DN}a[LSj:{,]5o">Food</variable><variable type="KIND_SpriteKind" id="_W9{iWXdZn%ZKimhbb0n">Enemy</variable><variable id="sh7LjK%Dnyp[z.o![aCK">mySprite</variable><variable id="i8MhG]5CRw$Fj)^%O;f*">myDart</variable><variable id=":`H^FyM,[4;iJX,0x@BH">item</variable></variables><block type="pxt-on-start" id="xRRgvHNlG#rZ^u`HECiY" x="0" y="0"><statement name="HANDLER"><block type="gamesetbackgroundcolor" id="{K`//gk%mdd,d2UH,]-P"><value name="color"><shadow type="colorindexpicker" id="BXjpH%K!n:;HM0+)1]77"><field name="index">12</field></shadow></value><next><block type="variables_set" id="2u{*T+$YNsGZyO4Xh!.2"><field name="VAR" id="i8MhG]5CRw$Fj)^%O;f*">myDart</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="dartsCreate" id="+zCWIw=Na|9V9rj8CsfB"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><value name="img"><shadow type="screen_image_picker" id="/^7fSyf6o?on;_%znHn="><field name="img">img`
+. . . . 4 4 4 4 f 4 4 4 4 . . . . 
+. . . 4 4 4 4 4 f 4 4 4 4 4 . . . 
+. . f 4 4 4 4 4 f 4 4 4 4 4 f . . 
+. 4 4 f 4 4 4 4 f 4 4 4 4 f 4 4 . 
+4 4 4 4 f 4 4 4 f 4 4 4 f 4 4 4 4 
+4 4 4 4 f 4 4 4 f 4 4 4 f 4 4 4 4 
+4 4 4 4 f 4 4 4 f 4 4 4 f 4 4 4 4 
+4 4 4 4 f 4 4 4 f 4 4 4 f 4 4 4 4 
+f f f f f f f f f f f f f f f f f 
+4 4 4 4 f 4 4 4 f 4 4 4 f 4 4 4 4 
+4 4 4 4 f 4 4 4 f 4 4 4 f 4 4 4 4 
+4 4 4 4 f 4 4 4 f 4 4 4 f 4 4 4 4 
+4 4 4 4 f 4 4 4 f 4 4 4 f 4 4 4 4 
+. 4 4 f 4 4 4 4 f 4 4 4 4 f 4 4 . 
+. . f 4 4 4 4 4 f 4 4 4 4 4 f . . 
+. . . 4 4 4 4 4 f 4 4 4 4 4 . . . 
+. . . . 4 4 4 4 f 4 4 4 4 . . . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":"/^7fSyf6o?on;_%znHn="}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="NZmZw!=ych(+{Y+C8xbK"><field name="MEMBER">Projectile</field></shadow></value></block></value></block></next></block></statement></block></xml>
