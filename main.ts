@@ -5,15 +5,18 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     myDart.throwDart()
 })
 info.onCountdownEnd(function () {
-    if (true) {
-    	
+    if (5 >= score) {
+        game.splash("You win!")
+        game.over(true)
     } else {
-    	
+        game.splash("You lose!")
+        game.over(false)
     }
 })
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Basket, function (sprite, otherSprite) {
     info.changeScoreBy(1)
 })
+let score = 0
 let myDart: Dart = null
 scene.setBackgroundColor(12)
 myDart = darts.create(img`
@@ -71,4 +74,4 @@ let basket = sprites.create(img`
     `, SpriteKind.Basket)
 info.setScore(0)
 info.startCountdown(30)
-let score = info.score()
+score = info.score()
