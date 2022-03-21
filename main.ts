@@ -1,5 +1,6 @@
 namespace SpriteKind {
     export const Basket = SpriteKind.create()
+    export const thing = SpriteKind.create()
 }
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     myDart.throwDart()
@@ -20,6 +21,7 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Basket, function (sprite, ot
 let score = 0
 let myDart: Dart = null
 scene.setBackgroundColor(12)
+let backgroundColor = scene.backgroundColor()
 myDart = darts.create(img`
     . . . . 4 4 4 4 f 4 4 4 4 . . . . 
     . . . 4 4 4 4 4 f 4 4 4 4 4 . . . 
