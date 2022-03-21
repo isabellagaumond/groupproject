@@ -4,6 +4,13 @@ namespace SpriteKind {
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     myDart.throwDart()
 })
+info.onCountdownEnd(function () {
+    if (true) {
+    	
+    } else {
+    	
+    }
+})
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Basket, function (sprite, otherSprite) {
     info.changeScoreBy(1)
 })
@@ -63,3 +70,5 @@ let basket = sprites.create(img`
     ................
     `, SpriteKind.Basket)
 info.setScore(0)
+info.startCountdown(30)
+let score = info.score()
