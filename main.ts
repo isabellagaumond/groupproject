@@ -17,32 +17,36 @@ info.onCountdownEnd(function () {
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Basket, function (sprite, otherSprite) {
     info.changeScoreBy(1)
     myDart.sprite.destroy()
+    dartSpawn()
 })
-let score = 0
+function dartSpawn () {
+    myDart = darts.create(img`
+        . . . . 4 4 4 4 f 4 4 4 4 . . . . 
+        . . . 4 4 4 4 4 f 4 4 4 4 4 . . . 
+        . . f 4 4 4 4 4 f 4 4 4 4 4 f . . 
+        . 4 4 f 4 4 4 4 f 4 4 4 4 f 4 4 . 
+        4 4 4 4 f 4 4 4 f 4 4 4 f 4 4 4 4 
+        4 4 4 4 f 4 4 4 f 4 4 4 f 4 4 4 4 
+        4 4 4 4 f 4 4 4 f 4 4 4 f 4 4 4 4 
+        4 4 4 4 f 4 4 4 f 4 4 4 f 4 4 4 4 
+        f f f f f f f f f f f f f f f f f 
+        4 4 4 4 f 4 4 4 f 4 4 4 f 4 4 4 4 
+        4 4 4 4 f 4 4 4 f 4 4 4 f 4 4 4 4 
+        4 4 4 4 f 4 4 4 f 4 4 4 f 4 4 4 4 
+        4 4 4 4 f 4 4 4 f 4 4 4 f 4 4 4 4 
+        . 4 4 f 4 4 4 4 f 4 4 4 4 f 4 4 . 
+        . . f 4 4 4 4 4 f 4 4 4 4 4 f . . 
+        . . . 4 4 4 4 4 f 4 4 4 4 4 . . . 
+        . . . . 4 4 4 4 f 4 4 4 4 . . . . 
+        `, SpriteKind.Projectile)
+    myDart.sprite.setPosition(randint(10, 150), 106)
+    myDart.setTrace()
+    myDart.controlWithArrowKeys()
+}
 let myDart: Dart = null
+let score = 0
 scene.setBackgroundColor(12)
-myDart = darts.create(img`
-    . . . . 4 4 4 4 f 4 4 4 4 . . . . 
-    . . . 4 4 4 4 4 f 4 4 4 4 4 . . . 
-    . . f 4 4 4 4 4 f 4 4 4 4 4 f . . 
-    . 4 4 f 4 4 4 4 f 4 4 4 4 f 4 4 . 
-    4 4 4 4 f 4 4 4 f 4 4 4 f 4 4 4 4 
-    4 4 4 4 f 4 4 4 f 4 4 4 f 4 4 4 4 
-    4 4 4 4 f 4 4 4 f 4 4 4 f 4 4 4 4 
-    4 4 4 4 f 4 4 4 f 4 4 4 f 4 4 4 4 
-    f f f f f f f f f f f f f f f f f 
-    4 4 4 4 f 4 4 4 f 4 4 4 f 4 4 4 4 
-    4 4 4 4 f 4 4 4 f 4 4 4 f 4 4 4 4 
-    4 4 4 4 f 4 4 4 f 4 4 4 f 4 4 4 4 
-    4 4 4 4 f 4 4 4 f 4 4 4 f 4 4 4 4 
-    . 4 4 f 4 4 4 4 f 4 4 4 4 f 4 4 . 
-    . . f 4 4 4 4 4 f 4 4 4 4 4 f . . 
-    . . . 4 4 4 4 4 f 4 4 4 4 4 . . . 
-    . . . . 4 4 4 4 f 4 4 4 4 . . . . 
-    `, SpriteKind.Projectile)
-myDart.sprite.setPosition(10, 106)
-myDart.setTrace()
-myDart.controlWithArrowKeys()
+dartSpawn()
 let basket = sprites.create(img`
     ................
     111111111111111.
