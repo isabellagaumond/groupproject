@@ -43,6 +43,10 @@ function dartSpawn () {
     myDart.setTrace()
     myDart.controlWithArrowKeys()
 }
+sprites.onOverlap(SpriteKind.Projectile, SpriteKind.thing, function (sprite, otherSprite) {
+    myDart.sprite.destroy()
+    dartSpawn()
+})
 let myDart: Dart = null
 let score = 0
 scene.setBackgroundColor(12)
