@@ -53,6 +53,7 @@ let basket: Sprite = null
 scene.setBackgroundColor(12)
 let input2 = game.askForString("What is your name?")
 game.splash("Hello " + input2)
+game.splash("Get 5 or more points to win!")
 ballSpawn()
 basket = sprites.create(img`
     ...................
