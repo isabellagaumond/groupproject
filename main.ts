@@ -15,6 +15,7 @@ info.onCountdownEnd(function () {
 })
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Basket, function (sprite, otherSprite) {
     info.changeScoreBy(1)
+    myDart.sprite.destroy()
 })
 let score = 0
 let myDart: Dart = null
