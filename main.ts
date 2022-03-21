@@ -6,7 +6,7 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     myDart.throwDart()
 })
 info.onCountdownEnd(function () {
-    if (info.score() >= 5) {
+    if (info.score() >= 3) {
         game.splash("You win!")
         game.over(true)
     } else {
