@@ -51,6 +51,8 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.thing, function (sprite, oth
 let myDart: Dart = null
 let basket: Sprite = null
 scene.setBackgroundColor(12)
+let input2 = game.askForString("What is your name?")
+game.splash("Hello " + input2)
 ballSpawn()
 basket = sprites.create(img`
     ...................
