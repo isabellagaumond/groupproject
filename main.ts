@@ -338,7 +338,7 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Goal, function (sprite, othe
     )
     pause(1000)
     basket.setPosition(randint(20, 100), randint(30, 60))
-    basketScoreZone.setPosition(basket.x, basket.y - 10)
+    basketScoreZone.setPosition(basket.x, basket.y)
     ballSpawn()
     scoreboardSpriteChange()
 })
